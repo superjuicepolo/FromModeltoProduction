@@ -2,7 +2,7 @@ import requests
 
 def request_predict_batch():
     return requests.post(
-        url=f"http://0.0.0.0:8000/predict"
+        url=f"http://127.0.0.1:5000/predict"
     )
 
 

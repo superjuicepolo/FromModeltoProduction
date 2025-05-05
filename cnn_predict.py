@@ -38,7 +38,7 @@ def predict_images(image_paths):
     return predictions
 
 # Example usage:
-# image_list = ['path/to/image1.jpg', 'path/to/image2.png']
+# image_list = ['archive/train/1/0a4f72f295b004edf174736390d625ca83da4383_1623146930_50414315ed754701ab973aadee1a67c6.jpg', 'archive/train/5/0a90f9cca5cfef4a390e6a83f799f142fb26ee37_1628546209_97b95c7641514e73b7c8f95039259221.jpg']
 # results = predict_images(image_list)
 # for img_path, label in results:
 #     print(f"{img_path} -> Predicted label: {label}")

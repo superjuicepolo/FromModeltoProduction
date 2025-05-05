@@ -1,5 +1,6 @@
-from predict import predict_batch
+from cnn_predict import predict_images
 from flask import Flask, request, jsonify
+from utils import get_jpg_image_paths
 
 app = Flask(__name__)
 
@@ -8,7 +9,7 @@ def predict():
     # print("printing from server")
 
     try:
-        labels = predict_batch()
+        labels = predict_images(get_jpg_image_paths("returned_images_of_the_items"))
         return jsonify({"predicted_labels": labels})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
