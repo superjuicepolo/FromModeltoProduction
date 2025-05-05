@@ -1,4 +1,6 @@
 import requests
+import time
+
 
 def request_predict_batch():
     return requests.post(
@@ -8,7 +10,9 @@ def request_predict_batch():
 
 
 if __name__ == '__main__':
-    print("making request from the user")
-    print(request_predict_batch().json())
+    # We are calling the api each day
+    while True:
+        print("making request from the user")
+        print(request_predict_batch().json())
 
-
+        time.sleep(60*60*24)
